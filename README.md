@@ -50,9 +50,7 @@ export PROMPT='%(?.%F{2}√.%F{1}X)%F{7}|%F{6}%n%F{248}@%F{6}%m%F{7}:%B%F{5}%3~%
 
 ## Step 4: Organize Your Configuration
 
-As you can imagine your `.zshrc` file can get rather large.  So you may want to separate pieces of code into individual files and then call them from withing the `.zshrc` file.  To do this you have to make sure you run them with the command `source`.  This command executes a shell script but keeps any changes to environment variables.  Without `source` the shell script is run in a sandbox and the shell is returned to the initial state before the program was executed.  For us, in this case, the entire point is to have the changes persist in our shell, so we must use `source`.
-
-Then you can `source` the files you want in the `.zshrc` file. So you would probably just want these lines in your `zshrc`:
+To keep your `.zshrc` file manageable, you can separate pieces of code into individual files and source them. Create a `.sources` directory in your home directory and place your configuration files there. Your `.zshrc` might look like this:
 
 ````
 # Prompt
@@ -65,26 +63,9 @@ source ~/.sources/setup-bins.sh
 source ~/.sources/setup-aliases.sh
 ```
 
-What I have in each of these files I have talked about:
+### Example Configuration Files
 
-#######################################################
-.zshrc 
-
-```
-# Prompt
-source ~/.sources/setup-prompt.zsh
-
-# Path and bin dirs
-source ~/.sources/setup-bins.zsh
-
-# Aliases for things like nano
-source ~/.sources/setup-aliases.zsh
-```
-
-In the .sources/ directory I have the files:
-setup-prompt.zsh
-setup-bins.zsh
-setup-aliases.zsh
+Here are the contens of each file in the `.sources` directory:
 
 #######################################################
 setup-prompt.zsh:
