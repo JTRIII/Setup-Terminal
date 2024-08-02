@@ -53,7 +53,7 @@ chsh -s $(which zsh)
 
 ## Step 2: Create and Configure `.zshrc`
 
-Create a file in your home directory called `.zshrc`. This file will want define anything you want to run whenever you open a new terminal session. Test it by adding the following line at the top:
+Create a file in your home directory called `.zshrc`. This file will define anything you want to run whenever you open a new terminal session. Test it by adding the following line at the top:
 
 ```
 echo "Hello, world!"
@@ -121,13 +121,13 @@ Your `.zshrc` file will source these separate configuration files. Here is an ex
 
 ```
 # Prompt
-source ~/.sources/setup-prompt.sh
+source ~/.sources/setup-prompt.zsh
 
 # Path and bin dirs
-source ~/.sources/setup-bins.sh
+source ~/.sources/setup-bins.zsh
 
 # Aliases
-source ~/.sources/setup-aliases.sh
+source ~/.sources/setup-aliases.zsh
 ```
 
 ### Sourcing the `.zshrc` File
